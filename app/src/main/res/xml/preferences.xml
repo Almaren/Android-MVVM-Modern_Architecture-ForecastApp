@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Weather Location">
+		<SwitchPreference
+			android:key="prefUseLocation"
+			android:title="Use device location"
+			android:summary="Allow the app to get your location"
+			android:defaultValue="true"
+			android:disableDependentsState="true"/>
+
+		<EditTextPreference
+			android:key="prefCustomLocation"
+			android:title="Location"
+			android:summary="The location for which the weather is"
+			android:defaultValue="Prague"
+			android:dependency="prefUseLocation"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="Units">
+		<ListPreference
+			android:key="prefListUnitSystem"
+			android:title="Unit system"
+			android:summary="%s"
+			android:entries="@array/strArrUnitSystemEntries"
+			android:entryValues="@array/strArrUnitSystemValues"
+			android:defaultValue="METRIC"/>
+	</PreferenceCategory>
+</PreferenceScreen>
