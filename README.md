@@ -6,3 +6,4 @@ Implementation based on tutorials from: https://resocoder.com/
 * ViewModels keeps LiveData. DAO not returns LiveData objects.
 * Unit system via Enum.
 * Coroutines use different implementation.
+* Standard RecycleView instead of third library.
